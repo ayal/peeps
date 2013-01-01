@@ -1,0 +1,19 @@
+<head>
+  <title>peeps</title>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  {{> thepeeps}}
+</body>
+
+<template name="thepeeps">
+  {{#each list}}
+  <div class="peep">
+    <span>{{sid}}</span>
+    <span><img src="https://graph.facebook.com/{{fbid}}/picture" /></span>
+    <span>{{name}}</span>
+  </div>
+  {{/each}}
+  <input type="button" value="Login" />
+</template>
